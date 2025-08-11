@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rent - Alugue, Ganhe & Economize</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="header">
+            <a href="#sobre-nos" class="nav-link">Sobre Nós</a>
+            <a href="#por-que-rent" class="nav-link">Por que usar</a>
+
+            <a class="logo-button" href="#" id="logo-home">
+                <img width="80" src="assets/rent-logo.png" alt="logo Rent">
+            </a>
+            
+            <a href="#quero-alugar" class="nav-link">Quero Alugar</a>
+            <a href="#contato" class="nav-link">Contato</a>
+            
+            <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav class="nav-mobile" id="nav-mobile">
+                <a href="#sobre-nos" class="nav-link">Sobre Nós</a>
+                <a href="#por-que-rent" class="nav-link">Por que usar</a>
+                <a href="#quero-alugar" class="nav-link">Quero Alugar</a>
+                <a href="#contato" class="nav-link">Contato</a>
+            </nav>
+        </div>
+
+        <div class="hero">
+            <span class="hero-title">Alugue, Ganhe <br> e Economize</span>
+            <span class="hero-subtitle">
+                Transforme o que você já tem em <strong>renda extra</strong>. <br>Encontre o que precisa <strong>por menos</strong>.
+            </span>
+            <form class="hero-search" action="#" onsubmit="return false;">
+                <input type="text" placeholder="O que você precisa hoje?" aria-label="Pesquisar item para alugar">
+                <button type="button" class="outline-button">Pesquisar</button>
+            </form>
+        </div>
+
+        <div class="featured-items">
+            <img src="assets/ps5.webp" alt="PlayStation 5">
+            <img src="assets/camera.png" alt="Câmera">
+            <img src="assets/furadeira.webp" alt="Furadeira">
+            <img src="assets/bicicleta.png" alt="Bicicleta">
+        </div>
+
+        <!-- Banner de categorias (marquee) -->
+        <div class="categories-banner" role="region" aria-label="Categorias de itens para alugar">
+            <div class="marquee">
+                <div class="marquee-track">
+                    <span class="banner-item">🚲 Bicicletas</span>
+                    <span class="banner-item">📷 Câmeras</span>
+                    <span class="banner-item">🛠️ Ferramentas</span>
+                    <span class="banner-item">🎮 Videogames</span>
+                    <span class="banner-item">🚁 Drones</span>
+                    <span class="banner-item">🎸 Instrumentos</span>
+                    <span class="banner-item">🏕️ Esportivos</span>
+                    <span class="banner-item">🎉 Festas & Eventos</span>
+                    <span class="banner-item">📺 Eletrônicos</span>
+                    <span class="banner-item">🌿 Jardinagem</span>
+                </div>
+                <div class="marquee-track" aria-hidden="true">  
+                    <span class="banner-item"></span>
+                    <span class="banner-item">🚲 Bicicletas</span>
+                    <span class="banner-item">📷 Câmeras</span>
+                    <span class="banner-item">🛠️ Ferramentas</span>
+                    <span class="banner-item">🎮 Videogames</span>
+                    <span class="banner-item">🚁 Drones</span>
+                    <span class="banner-item">🎸 Instrumentos</span>
+                    <span class="banner-item">🏕️ Esportivos</span>
+                    <span class="banner-item">🎉 Festas & Eventos</span>
+                    <span class="banner-item">📺 Eletrônicos</span>
+                    <span class="banner-item">🌿 Jardinagem</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Conteúdo principal -->
+        <section id="como-funciona" class="section">
+            <div class="section-header">
+                <span class="kicker">Passo a passo</span>
+                <h2>Como Funciona</h2>
+            </div>
+
+            <!-- Linha 1: Alugar de outros -->
+            <div class="steps-grid reveal">
+                <div class="step-item step-header">
+                    <div class="step-icon">📦</div>
+                    <h3>Alugar de Outros</h3>
+                    <p>Encontre e alugue itens de outras pessoas</p>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">1</div>
+                    <h3>Busque & Compare</h3>
+                    <p>Encontre o item ideal por categoria e compare preços.</p>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">2</div>
+                    <h3>Reserve & Pague</h3>
+                    <p>Defina datas, combine entrega e finalize o pagamento seguro.</p>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">3</div>
+                    <h3>Use & Devolva</h3>
+                    <p>Aproveite o item e devolva no prazo combinado.</p>
+                </div>
+            </div>
+
+            <!-- Linha 2: Disponibilizar para outros -->
+            <div class="steps-grid reveal">
+                <div class="step-item step-header">
+                    <div class="step-icon">💰</div>
+                    <h3>Disponibilizar para Outros</h3>
+                    <p>Ganhe dinheiro com seus itens parados</p>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">1</div>
+                    <h3>Anuncie seu Item</h3>
+                    <p>Cadastre fotos, descrição e defina o preço do aluguel.</p>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">2</div>
+                    <h3>Receba Solicitações</h3>
+                    <p>Aprove pedidos e combine detalhes com os interessados.</p>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">3</div>
+                    <h3>Entregue & Receba</h3>
+                    <p>Entregue o item e receba o pagamento automaticamente.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="por-que-rent" class="section reveal">
+            <div class="section-header">
+                <span class="kicker">Vantagens</span>
+                <h2>Por que usar a Rent?</h2>
+            </div>
+            <div class="features-grid">
+                <div class="feature">
+                    <div class="feature-ico">💸</div>
+                    <h3>Economia Real</h3>
+                    <p>Pague só pelo tempo de uso. Sem custos de compra e manutenção.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-ico">♻️</div>
+                    <h3>Sustentável</h3>
+                    <p>Compartilhar reduz lixo e maximiza o uso de recursos.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-ico">🧾</div>
+                    <h3>Pagamento Protegido</h3>
+                    <p>Transações seguras com comprovantes e suporte dedicado.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-ico">⭐</div>
+                    <h3>Comunidade Avaliada</h3>
+                    <p>Perfis verificados, avaliações públicas e reputação confiável.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="sobre-nos" class="section reveal">
+            <div class="section-header">
+                <span class="kicker">Nossa missão</span>
+                <h2>Sobre Nós</h2>
+            </div>
+
+            <div class="content-with-image">
+                <div class="text-content">
+                    <p>Somos uma plataforma que conecta pessoas interessadas em compartilhar recursos de forma inteligente e sustentável. Nossa missão é democratizar o acesso a bens e serviços, permitindo que qualquer pessoa possa monetizar itens ociosos ou encontrar exatamente o que precisa sem os custos de uma compra.</p>
+                    <p>Acreditamos que o futuro da economia é colaborativo. Por isso, criamos um ambiente seguro e confiável onde nossa comunidade pode prosperar, economizar e ainda contribuir para um mundo mais sustentável através do compartilhamento consciente.</p>
+                </div>
+                <div class="image-content">
+                    <img src="assets/team.jpeg" alt="Nossa equipe">
+                </div>
+            </div>
+        </section>
+
+        <section id="quero-alugar" class="section reveal">
+            <div class="section-header">
+                <span class="kicker">Para quem quer alugar</span>
+                <h2>Quero Alugar</h2>
+            </div>
+
+            <div class="card-row">
+                <div class="card">
+                    <div class="card-icon">🔎</div>
+                    <h3>Busque & Compare</h3>
+                    <p>Filtre por categoria, preço e localização. Compare avaliações de outros clientes.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">📅</div>
+                    <h3>Reserve em Minutos</h3>
+                    <p>Escolha datas, combine entrega/retirada e garanta seu item com pagamento protegido.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">🛡️</div>
+                    <h3>Seguro & Suporte</h3>
+                    <p>Transações seguras, chat com o dono e suporte para qualquer imprevisto.</p>
+                </div>
+            </div>
+
+            <div class="cta">
+                <a href="#como-funciona" class="full-button">Começar Agora</a>
+                <a href="#sobre-nos" class="outline-button">Saiba Mais</a>
+            </div>
+        </section>
+
+        <section id="faq" class="section reveal">
+            <div class="section-header">
+                <span class="kicker">Dúvidas frequentes</span>
+                <h2>FAQ</h2>
+            </div>
+            <div class="faq">
+                <details>
+                    <summary>Como é feito o pagamento?</summary>
+                    <p>Pagamento online protegido. Valores ficam em custódia até a confirmação de devolução.</p>
+                </details>
+                <details>
+                    <summary>Existe caução ou seguro?</summary>
+                    <p>Alguns itens podem solicitar caução. Oferecemos proteção e suporte em casos de imprevistos.</p>
+                </details>
+                <details>
+                    <summary>Posso cancelar?</summary>
+                    <p>Sim, com política de cancelamento clara e prazos informados no momento da reserva.</p>
+                </details>
+            </div>
+        </section>
+
+        <section id="contato" class="section reveal">
+            <div class="section-header">
+                <span class="kicker">Fale com a gente</span>
+                <h2>Contato</h2>
+            </div>
+
+            <div class="contact-flex">
+                <div class="contact-card">
+                    <h3>Atendimento</h3>
+                    <p>Email: <a href="mailto:contato@rent.com">contato@rent.com</a></p>
+                    <p>WhatsApp: <a href="https://wa.me/5500000000000" target="_blank" rel="noopener noreferrer">(00) 00000-0000</a></p>
+                </div>
+                <form id="contact-form" class="contact-form">
+                    <div class="field">
+                        <label for="nome">Nome</label>
+                        <input id="nome" name="nome" placeholder="Seu nome" />
+                    </div>
+                    <div class="field">
+                        <label for="email">Email</label>
+                        <input id="email" name="email" type="email" placeholder="seuemail@exemplo.com" />
+                    </div>
+                    <div class="field">
+                        <label for="mensagem">Mensagem</label>
+                        <textarea id="mensagem" name="mensagem" rows="4" placeholder="Como podemos ajudar?"></textarea>
+                    </div>
+                    <button type="submit" class="full-button">Enviar</button>
+                </form>
+            </div>
+        </section>
+
+        <section id="newsletter" class="section reveal">
+            <div class="newsletter">
+                <h3>Receba novidades e ofertas</h3>
+                <form class="newsletter-form" onsubmit="return false;">
+                    <input type="email" placeholder="Seu email" aria-label="Email para receber novidades" />
+                    <button class="outline-button" type="button">Assinar</button>
+                </form>
+            </div>
+        </section>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
