@@ -59,6 +59,15 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
+    // Logo footer também leva ao topo
+    const footerLogoHome = document.getElementById('footer-logo-home');
+    if (footerLogoHome) {
+        footerLogoHome.addEventListener('click', (e) => {
+            e.preventDefault();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    }
+
     // Menu burger toggle
     if (menuToggle && navMobile) {
         menuToggle.addEventListener('click', () => {
@@ -74,36 +83,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
-// Função para alternar exibição dos passos
-function toggleSteps(type) {
-    const step1 = document.getElementById(`${type}-steps`);
-    const step2 = document.getElementById(`${type}-steps-2`);
-    const step3 = document.getElementById(`${type}-steps-3`);
-    
-    const isVisible = step1.classList.contains('show');
-    
-    if (isVisible) {
-        // Esconder com animação
-        [step1, step2, step3].forEach((step, index) => {
-            setTimeout(() => {
-                step.classList.remove('show');
-                setTimeout(() => {
-                    step.style.display = 'none';
-                }, 400);
-            }, index * 100);
-        });
-    } else {
-        // Mostrar com animação
-        [step1, step2, step3].forEach((step, index) => {
-            setTimeout(() => {
-                step.style.display = 'block';
-                setTimeout(() => {
-                    step.classList.add('show');
-                }, 50);
-            }, index * 150);
-        });
-    }
-}
+
 
 // Função para alternar FAQ
 function toggleFAQ() {
@@ -113,6 +93,7 @@ function toggleFAQ() {
     const isHidden = hiddenFAQs[0].style.display === 'none' || hiddenFAQs[0].style.display === '';
     
     if (isHidden) {
+        // Mostrar com animação
         hiddenFAQs.forEach((faq, index) => {
             setTimeout(() => {
                 faq.style.display = 'block';
@@ -123,13 +104,10 @@ function toggleFAQ() {
         });
         toggleButton.innerHTML = 'Mostrar menos perguntas ↑';
     } else {
-        hiddenFAQs.forEach((faq, index) => {
-            setTimeout(() => {
-                faq.classList.remove('show');
-                setTimeout(() => {
-                    faq.style.display = 'none';
-                }, 400);
-            }, index * 50);
+        // Esconder instantaneamente
+        hiddenFAQs.forEach((faq) => {
+            faq.classList.remove('show');
+            faq.style.display = 'none';
         });
         toggleButton.innerHTML = 'Mostrar mais perguntas ↓';
     }
