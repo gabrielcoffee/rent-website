@@ -95,22 +95,22 @@
 
             <!-- Linha 1: Alugar de outros -->
             <div class="steps-grid reveal">
-                <div class="step-item step-header">
+                <div class="step-item step-header step-button" onclick="toggleSteps('alugar')">
                     <div class="step-icon">📦</div>
                     <h3>Alugar de Outros</h3>
-                    <p>Encontre e alugue itens de outras pessoas</p>
+                    <p>Clique para ver os passos</p>
                 </div>
-                <div class="step-item">
+                <div class="step-item steps-content" id="alugar-steps" style="display: none;">
                     <div class="step-number">1</div>
                     <h3>Busque & Compare</h3>
                     <p>Encontre o item ideal por categoria e compare preços.</p>
                 </div>
-                <div class="step-item">
+                <div class="step-item steps-content" id="alugar-steps-2" style="display: none;">
                     <div class="step-number">2</div>
                     <h3>Reserve & Pague</h3>
                     <p>Defina datas, combine entrega e finalize o pagamento seguro.</p>
                 </div>
-                <div class="step-item">
+                <div class="step-item steps-content" id="alugar-steps-3" style="display: none;">
                     <div class="step-number">3</div>
                     <h3>Use & Devolva</h3>
                     <p>Aproveite o item e devolva no prazo combinado.</p>
@@ -119,25 +119,25 @@
 
             <!-- Linha 2: Disponibilizar para outros -->
             <div class="steps-grid reveal">
-                <div class="step-item step-header">
+                <div class="step-item step-header step-button" onclick="toggleSteps('disponibilizar')">
                     <div class="step-icon">💰</div>
                     <h3>Disponibilizar para Outros</h3>
-                    <p>Ganhe dinheiro com seus itens parados</p>
+                    <p>Clique para ver os passos</p>
                 </div>
-                <div class="step-item">
+                <div class="step-item steps-content" id="disponibilizar-steps" style="display: none;">
                     <div class="step-number">1</div>
                     <h3>Anuncie seu Item</h3>
                     <p>Cadastre fotos, descrição e defina o preço do aluguel.</p>
                 </div>
-                <div class="step-item">
+                <div class="step-item steps-content" id="disponibilizar-steps-2" style="display: none;">
                     <div class="step-number">2</div>
                     <h3>Receba Solicitações</h3>
                     <p>Aprove pedidos e combine detalhes com os interessados.</p>
                 </div>
-                <div class="step-item">
+                <div class="step-item steps-content" id="disponibilizar-steps-3" style="display: none;">
                     <div class="step-number">3</div>
                     <h3>Entregue & Receba</h3>
-                    <p>Entregue o item e receba o pagamento automaticamente.</p>
+                    <p>Entregue o item e receba o pagamento.</p>
                 </div>
             </div>
         </section>
@@ -151,22 +151,12 @@
                 <div class="feature">
                     <div class="feature-ico">💸</div>
                     <h3>Economia Real</h3>
-                    <p>Pague só pelo tempo de uso. Sem custos de compra e manutenção.</p>
+                    <p>Pague só pelo tempo de uso dentro do seu condomínio. Sem custos de compra, manutenção ou armazenamento. Acesse furadeiras, ferramentas e equipamentos dos seus vizinhos quando precisar, economizando espaço e dinheiro.</p>
                 </div>
                 <div class="feature">
                     <div class="feature-ico">♻️</div>
                     <h3>Sustentável</h3>
-                    <p>Compartilhar reduz lixo e maximiza o uso de recursos.</p>
-                </div>
-                <div class="feature">
-                    <div class="feature-ico">🧾</div>
-                    <h3>Pagamento Protegido</h3>
-                    <p>Transações seguras com comprovantes e suporte dedicado.</p>
-                </div>
-                <div class="feature">
-                    <div class="feature-ico">⭐</div>
-                    <h3>Comunidade Avaliada</h3>
-                    <p>Perfis verificados, avaliações públicas e reputação confiável.</p>
+                    <p>Compartilhar entre vizinhos reduz o desperdício e maximiza o uso de recursos no condomínio. Uma furadeira usada por 10 famílias é mais eficiente que 10 furadeiras guardadas. Juntos, criamos um ambiente mais sustentável e colaborativo.</p>
                 </div>
             </div>
         </section>
@@ -188,36 +178,6 @@
             </div>
         </section>
 
-        <section id="quero-alugar" class="section reveal">
-            <div class="section-header">
-                <span class="kicker">Para quem quer alugar</span>
-                <h2>Quero Alugar</h2>
-            </div>
-
-            <div class="card-row">
-                <div class="card">
-                    <div class="card-icon">🔎</div>
-                    <h3>Busque & Compare</h3>
-                    <p>Filtre por categoria, preço e localização. Compare avaliações de outros clientes.</p>
-                </div>
-                <div class="card">
-                    <div class="card-icon">📅</div>
-                    <h3>Reserve em Minutos</h3>
-                    <p>Escolha datas, combine entrega/retirada e garanta seu item com pagamento protegido.</p>
-                </div>
-                <div class="card">
-                    <div class="card-icon">🛡️</div>
-                    <h3>Seguro & Suporte</h3>
-                    <p>Transações seguras, chat com o dono e suporte para qualquer imprevisto.</p>
-                </div>
-            </div>
-
-            <div class="cta">
-                <a href="#como-funciona" class="full-button">Começar Agora</a>
-                <a href="#sobre-nos" class="outline-button">Saiba Mais</a>
-            </div>
-        </section>
-
         <section id="faq" class="section reveal">
             <div class="section-header">
                 <span class="kicker">Dúvidas frequentes</span>
@@ -225,17 +185,86 @@
             </div>
             <div class="faq">
                 <details>
+                    <summary>Como funciona dentro do condomínio?</summary>
+                    <p>A plataforma conecta moradores do mesmo condomínio para compartilhar itens. Você pode alugar ferramentas, equipamentos e outros objetos dos seus vizinhos de forma segura e prática.</p>
+                </details>
+                <details>
+                    <summary>Como defino o preço do meu item?</summary>
+                    <p>Você pode definir o preço livremente. Sugerimos uma porcentagem do valor de mercado como referência, mas o valor final é sempre sua escolha baseada na demanda e condição do item.</p>
+                </details>
+                <details>
+                    <summary>Preciso conhecer meus vizinhos pessoalmente?</summary>
+                    <p>Não é obrigatório, mas recomendamos. A plataforma facilita o primeiro contato, mas conhecer seus vizinhos torna o processo mais confiável e colaborativo.</p>
+                </details>
+                <details>
+                    <summary>Como é feita a entrega dentro do condomínio?</summary>
+                    <p>A entrega pode ser combinada diretamente entre os moradores: na portaria, no apartamento ou em área comum. A proximidade facilita a logística.</p>
+                </details>
+                <details class="faq-hidden" style="display: none;">
+                    <summary>E se meu vizinho danificar meu item?</summary>
+                    <p>Ainda não nos responsabilizamos por danos ou imprevistos, porém logo poderemos implementar caução prévia. Por enquanto, incentivamos o diálogo entre vizinhos para resolver questões amigavelmente.</p>
+                </details>
+                <details class="faq-hidden" style="display: none;">
+                    <summary>Posso alugar para pessoas de outros condomínios?</summary>
+                    <p>Inicialmente, focamos apenas em conexões dentro do mesmo condomínio para garantir segurança e praticidade. Futuramente, expandiremos para um público geral.</p>
+                </details>
+                <details class="faq-hidden" style="display: none;">
                     <summary>Como é feito o pagamento?</summary>
-                    <p>Pagamento online protegido. Valores ficam em custódia até a confirmação de devolução.</p>
+                    <p>O pagamento é feito diretamente com o outro morador. Futuramente será através da plataforma, mas esta é uma versão inicial mais simplificada.</p>
                 </details>
-                <details>
-                    <summary>Existe caução ou seguro?</summary>
-                    <p>Alguns itens podem solicitar caução. Oferecemos proteção e suporte em casos de imprevistos.</p>
+                <details class="faq-hidden" style="display: none;">
+                    <summary>Que tipos de itens posso alugar?</summary>
+                    <p>Ferramentas, equipamentos domésticos, itens de festa, esportivos, eletrônicos, audiovisuais, jardinagem e muito mais. Praticamente qualquer item útil que você tenha parado pode gerar renda.</p>
                 </details>
-                <details>
-                    <summary>Posso cancelar?</summary>
-                    <p>Sim, com política de cancelamento clara e prazos informados no momento da reserva.</p>
+                <details class="faq-hidden" style="display: none;">
+                    <summary>Existe verificação dos moradores?</summary>
+                    <p>Sim, verificamos que o usuário realmente mora no condomínio através de documentos e confirmação com a administração predial.</p>
                 </details>
+                <details class="faq-hidden" style="display: none;">
+                    <summary>Posso recusar um pedido de aluguel?</summary>
+                    <p>Sim, você tem total controle sobre quando e para quem emprestar seus itens. Pode definir disponibilidade e escolher os inquilinos.</p>
+                </details>
+                <details class="faq-hidden" style="display: none;">
+                    <summary>Como funciona o sistema de avaliações?</summary>
+                    <p>Após cada aluguel, tanto locador quanto locatário podem avaliar a experiência e também o item alugado. Isso cria reputação e confiança entre os vizinhos.</p>
+                </details>
+                <details class="faq-hidden" style="display: none;">
+                    <summary>E se eu precisar do meu item enquanto está alugado?</summary>
+                    <p>Recomendamos verificar sua agenda antes de disponibilizar. Em emergências, dialogue com seu vizinho - a proximidade facilita renegociações.</p>
+                </details>
+
+                <details class="faq-hidden" style="display: none;">
+                    <summary>Como garanto que vou receber meu item de volta?</summary>
+                    <p>O fato de serem vizinhos aumenta a responsabilidade e facilita a cobrança. Além disso, futuramente poderemos implementar depósito de caução quando necessário.</p>
+                </details>
+                <details class="faq-hidden" style="display: none;">
+                    <summary>Posso cancelar um aluguel?</summary>
+                    <p>Sim, pode cancelar a qualquer momento sem gerar taxas no momento, por ser uma versão inicial. Porém recomendamos que seja avisado pelo menos 24h antes para não gerar conflitos.</p>
+                </details>
+                <details class="faq-hidden" style="display: none;">
+                    <summary>A administração do condomínio precisa autorizar?</summary>
+                    <p>Não é necessária autorização específica, mas mantemos boa relação com administrações e seguimos as regras internas de cada condomínio.</p>
+                </details>
+                <details class="faq-hidden" style="display: none;">
+                    <summary>Como defino por quanto tempo posso emprestar?</summary>
+                    <p>Você define livremente: algumas horas, dias ou semanas. Pode ter itens para aluguel rápido (furadeira por 2h) ou mais longo (bicicleta por uma semana).</p>
+                </details>
+                <details class="faq-hidden" style="display: none;">
+                    <summary>Preciso pagar imposto sobre a renda dos aluguéis?</summary>
+                    <p>Recomendamos consultar um contador, mas geralmente rendas pequenas entre vizinhos podem ser isentas. Fornecemos relatórios para facilitar sua declaração.</p>
+                </details>
+                <details class="faq-hidden" style="display: none;">
+                    <summary>O que acontece se a devolução atrasar?</summary>
+                    <p>Como são vizinhos, recomendamos diálogo direto para resolver atrasos. Futuramente implementaremos multas automáticas, mas por ora incentivamos a comunicação e bom senso entre moradores.</p>
+                </details>
+                <details class="faq-hidden" style="display: none;">
+                    <summary>Posso emprestar meu item sem cobrar nada?</summary>
+                    <p>Sim! Você pode disponibilizar itens gratuitamente para ajudar seus vizinhos. É uma forma de fortalecer a comunidade do condomínio e criar boas relações de vizinhança.</p>
+                </details>
+                
+                <div class="faq-toggle-container">
+                    <button id="faq-toggle" class="faq-toggle-btn" onclick="toggleFAQ()">Mostrar mais perguntas ↓</button>
+                </div>
             </div>
         </section>
 
@@ -279,6 +308,43 @@
             </div>
         </section>
     </div>
+
+    <div class="footer">
+        <div class="categories-banner" role="region" aria-label="Categorias de itens para alugar">
+            <div class="marquee">
+                <div class="marquee-track">
+                    <span class="banner-item">🚲 Bicicletas</span>
+                    <span class="banner-item">📷 Câmeras</span>
+                    <span class="banner-item">🛠️ Ferramentas</span>
+                    <span class="banner-item">🎮 Videogames</span>
+                    <span class="banner-item">🚁 Drones</span>
+                    <span class="banner-item">🎸 Instrumentos</span>
+                    <span class="banner-item">🏕️ Esportivos</span>
+                    <span class="banner-item">🎉 Festas & Eventos</span>
+                    <span class="banner-item">📺 Eletrônicos</span>
+                    <span class="banner-item">🌿 Jardinagem</span>
+                </div>
+                <div class="marquee-track" aria-hidden="true">  
+                    <span class="banner-item"></span>
+                    <span class="banner-item">🚲 Bicicletas</span>
+                    <span class="banner-item">📷 Câmeras</span>
+                    <span class="banner-item">🛠️ Ferramentas</span>
+                    <span class="banner-item">🎮 Videogames</span>
+                    <span class="banner-item">🚁 Drones</span>
+                    <span class="banner-item">🎸 Instrumentos</span>
+                    <span class="banner-item">🏕️ Esportivos</span>
+                    <span class="banner-item">🎉 Festas & Eventos</span>
+                    <span class="banner-item">📺 Eletrônicos</span>
+                    <span class="banner-item">🌿 Jardinagem</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-content">
+            
+        </div>
+    </div>
+
     
     <script src="script.js"></script>
 </body>

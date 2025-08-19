@@ -73,3 +73,64 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
+
+// Função para alternar exibição dos passos
+function toggleSteps(type) {
+    const step1 = document.getElementById(`${type}-steps`);
+    const step2 = document.getElementById(`${type}-steps-2`);
+    const step3 = document.getElementById(`${type}-steps-3`);
+    
+    const isVisible = step1.classList.contains('show');
+    
+    if (isVisible) {
+        // Esconder com animação
+        [step1, step2, step3].forEach((step, index) => {
+            setTimeout(() => {
+                step.classList.remove('show');
+                setTimeout(() => {
+                    step.style.display = 'none';
+                }, 400);
+            }, index * 100);
+        });
+    } else {
+        // Mostrar com animação
+        [step1, step2, step3].forEach((step, index) => {
+            setTimeout(() => {
+                step.style.display = 'block';
+                setTimeout(() => {
+                    step.classList.add('show');
+                }, 50);
+            }, index * 150);
+        });
+    }
+}
+
+// Função para alternar FAQ
+function toggleFAQ() {
+    const hiddenFAQs = document.querySelectorAll('.faq-hidden');
+    const toggleButton = document.getElementById('faq-toggle');
+    
+    const isHidden = hiddenFAQs[0].style.display === 'none' || hiddenFAQs[0].style.display === '';
+    
+    if (isHidden) {
+        hiddenFAQs.forEach((faq, index) => {
+            setTimeout(() => {
+                faq.style.display = 'block';
+                setTimeout(() => {
+                    faq.classList.add('show');
+                }, 50);
+            }, index * 100);
+        });
+        toggleButton.innerHTML = 'Mostrar menos perguntas ↑';
+    } else {
+        hiddenFAQs.forEach((faq, index) => {
+            setTimeout(() => {
+                faq.classList.remove('show');
+                setTimeout(() => {
+                    faq.style.display = 'none';
+                }, 400);
+            }, index * 50);
+        });
+        toggleButton.innerHTML = 'Mostrar mais perguntas ↓';
+    }
+}
