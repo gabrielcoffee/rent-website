@@ -1,19 +1,3 @@
-const scriptURL = "https://script.google.com/macros/s/AKfycbyWDqE397zq6DjW15UEgNs322EM2XeTmk2XNQI-4hNH86S8pPQPUIUXJkPhbzlY0NRtfw/exec"; // from Apps Script deployment
-
-document.getElementById("newsletter-form").addEventListener("submit", e => {
-  e.preventDefault();
-  const formData = { email: e.target.email.value };
-
-  fetch(scriptURL, {
-    method: "POST",
-    body: JSON.stringify(formData),
-    headers: { "Content-Type": "application/json" }
-  })
-  .then(() => alert("Inscrito com sucesso!"))
-  .catch(() => alert("Erro ao enviar, tente novamente."));
-});
-
-
 // Animação de fade-in das imagens quando a página carrega
 document.addEventListener('DOMContentLoaded', function() {
     const images = document.querySelectorAll('.featured-items img');
